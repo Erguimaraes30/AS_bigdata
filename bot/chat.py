@@ -74,7 +74,7 @@ async def process_message(turn_context, conversation_state, USER_PROFILE):
             try:
                 async with aiohttp.ClientSession() as session:
                     async with session.post(
-                        "http://localhost:8080/api/matriculas",
+                        "https://ibmecbotweb-c3fnf2axcwepftaj.westus-01.azurewebsites.net/api/matriculas",
                         json=matricula_payload,
                         timeout=10
                     ) as resp:
